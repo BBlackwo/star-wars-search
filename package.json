@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:fab": ""
+    "build:fab": "npm run build && npm run fab:compile",
+    "fab:compile": "fab-static dist/star-wars-search"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,7 @@
     "@angular/platform-browser": "^8.2.5",
     "@angular/platform-browser-dynamic": "^8.2.5",
     "@angular/router": "^8.2.5",
+    "@fab/static": "^0.1.8",
     "angular2-swapi": "^0.0.2",
     "core-js": "^2.5.4",
     "rxjs": "^6.5.3",
