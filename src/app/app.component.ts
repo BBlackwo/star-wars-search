@@ -9,7 +9,7 @@ import { SearchService } from './search/search.service';
 })
 export class AppComponent implements OnInit {
 
-  private types = [
+  public types = [
     { label: 'Films', fn: this.searchService.searchFilms.bind(this.searchService) },
     { label: 'People', fn: this.searchService.searchPeople.bind(this.searchService) },
     { label: 'Planets', fn: this.searchService.searchPlanets.bind(this.searchService) },
@@ -17,9 +17,9 @@ export class AppComponent implements OnInit {
     { label: 'Starships', fn: this.searchService.searchStarships.bind(this.searchService) },
     { label: 'Vehicles', fn: this.searchService.searchVehicles.bind(this.searchService) },
   ];
-  private searchFn: Function;
-  private searchTerm$ = new Subject<string>();
-  private data$: Observable<any>;
+  public searchFn: Function;
+  public searchTerm$ = new Subject<string>();
+  public data$: Observable<any>;
 
   constructor(
     private searchService: SearchService

@@ -15,8 +15,8 @@ import { Observable } from 'rxjs';
 })
 export class ResultComponent implements OnChanges {
 
-  private readonly SEARCHING_TEXT = 'Searching...';
-  private data = this.SEARCHING_TEXT;
+  public readonly SEARCHING_TEXT = 'Searching...';
+  public data = this.SEARCHING_TEXT;
 
   @Input() data$: Observable<any>;
 
